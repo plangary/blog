@@ -6,6 +6,19 @@ const StyledP = styled.p`
     color: white;
 `
 
+const StyledButton = styled(Button)`
+  color: white;
+  width: 100%;
+  background-color: #343a40;
+  border-color: white;
+  
+  &:hover{
+    background-color: #343a40;
+    border-color: aqua;
+    color: white;
+  }
+`
+
 export const NavBar = () => {
     return (
         <>
@@ -15,9 +28,9 @@ export const NavBar = () => {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                <Button className="btn-light">
+                                <StyledButton className="btn-light">
                                     Login
-                                </Button>
+                                </StyledButton>
                             </a>
                         </li>
 

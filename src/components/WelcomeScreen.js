@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Button, Col, Container, Row} from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 
 const StyledContainer = styled(Container)`
   background-color: #343a40 ;
@@ -18,6 +18,9 @@ const StyledText = styled.h2`
   font-size: 5rem;
   color: white;
   flex: 0 0 120px;
+  animation: fadeIn linear 10s;
+  
+  
 `
 const StyledButton = styled(Button)`
   color: white;
@@ -27,7 +30,7 @@ const StyledButton = styled(Button)`
   
   &:hover{
     background-color: #343a40;
-    border-color: rgba(63,0,19,0.99);
+    border-color: aqua;
   }
 `
 
@@ -40,7 +43,9 @@ export const WelcomeScreen = ()=> {
               <Row>
                   <Col className="text-center">
                       <StyledText>Welcome</StyledText>
-                      <StyledButton>HOW I LEARNED REACT</StyledButton>
+                      <Link to="/homepage">
+                          <StyledButton>HOW I LEARNED REACT</StyledButton>
+                      </Link>
                   </Col>
               </Row>
           </StyledContainer>
