@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
-
 const StyledContainer = styled(Container)`
   background-color: #343a40 ;
   max-width: 100%;

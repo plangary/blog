@@ -2,6 +2,8 @@ import firebase from "../firebase";
 import {useEffect, useState} from "react";
 import {Button, Card, CardGroup, Col, Container, Row} from "react-bootstrap";
 import styled from "styled-components";
+import "../style.css"
+import {Link} from "react-router-dom";
 
 const StyledFeaturedImage = styled(Card.Img)`
   height: 20rem;
@@ -14,10 +16,6 @@ const StyledItemImage = styled(Card.Img)`
 
 `
 
-const StyledCard = styled(Card)`
-  display: flex;
-  flex-direction: row;
-`
 
 export const HomePage = () => {
 
@@ -27,13 +25,9 @@ export const HomePage = () => {
     const [maxLength] = useState(99);
     const [numberOfItems, setNumberOfItems] = useState(0);
 
-    const style = {
-        card: {
-            flexDirection: "row",
-            alignItems: "center",
-
-        }
-    }
+    const StyledCardText = styled(Card)`
+        height: 50%;
+    `
 
     const ref = firebase.firestore().collection("myblogs");
 
@@ -51,29 +45,6 @@ export const HomePage = () => {
         });
     }
 
-    const createCol = (item)=>{
-        return (
-            <div>
-                <Col>
-                    <StyledItemImage variant="top" src={item.url}/>
-                </Col>
-                <Col>
-                    <StyledCard className="mb-3 mt-3">
-                        <Card.Body>
-                            <Card.Title style={{flex: "1"}}>{item.title}</Card.Title>
-                            <Card.Text style={{color: "grey"}}>{item.date}</Card.Text>
-                            <Card.Text>
-                                {item.description.substring(0, maxLength)}...
-                            </Card.Text>
-                            <Button variant="primary">Continue reading</Button>
-                        </Card.Body>
-                    </StyledCard>
-                </Col>
-            </div>
-
-
-        )
-    }
     const getFeatured = () => {
         data.filter(item => {
             if (item.featured === true) {
@@ -96,18 +67,18 @@ export const HomePage = () => {
         <>
 
 
-            <div className="container-fluid ">
+            <div className="container-fluid mt-4 ">
 
                 <Row className="g-4 mb-4 mr-5 ml-5">
                     <Card className="bg-dark text-white" style={{width: "100%"}}>
                         <StyledFeaturedImage className="" src={featuredPost.url} alt="Card image" />
                         <Card.ImgOverlay>
-                            <Card.Title>Card title</Card.Title>
+                            <Card.Title>{featuredPost.title}</Card.Title>
                             <Card.Text>
-                                This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.
+
+                                {featuredPost.description}
                             </Card.Text>
-                            <Card.Text>Last updated 3 mins ago</Card.Text>
+                            <Card.Text>Continue reading...</Card.Text>
                         </Card.ImgOverlay>
                     </Card>
                 </Row>
@@ -130,7 +101,9 @@ export const HomePage = () => {
                                                 <Card.Text>
                                                     {data[idx].description.substring(0, maxLength)}...
                                                 </Card.Text>
-                                                <Button variant="primary">Continue reading</Button>
+                                                <Link to="/detailedview">
+                                                    <Button variant="primary" >Continue reading</Button>
+                                                </Link>
                                             </Card.Body>
                                         </Col>
                                     </Row>

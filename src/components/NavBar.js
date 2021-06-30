@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {Button, Navbar} from "react-bootstrap";
-
+import {changeStatus} from "../redux/actions/loggedStatusReducer";
+import {useDispatch, useSelector} from "react-redux";
 
 const StyledP = styled.p`
     color: white;
@@ -19,7 +20,10 @@ const StyledButton = styled(Button)`
   }
 `
 
+
 export const NavBar = () => {
+    const isLogged = useSelector(state => state.isLogged1);
+
     return (
         <>
             <Navbar bg="dark" expand="lg">
@@ -28,9 +32,12 @@ export const NavBar = () => {
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                <StyledButton className="btn-light">
+                                {isLogged ? <StyledButton className="btn-light">
+                                    Sign Out
+                                </StyledButton> : <StyledButton className="btn-light">
                                     Login
-                                </StyledButton>
+                                </StyledButton>}
+
                             </a>
                         </li>
 
