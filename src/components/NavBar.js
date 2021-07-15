@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {Button, Navbar} from "react-bootstrap";
-import {changeStatus} from "../redux/actions/loggedStatusReducer";
+import {changeStatus} from "../redux/actions/loggedStatusAction";
 import {useDispatch, useSelector} from "react-redux";
 
 const StyledP = styled.p`

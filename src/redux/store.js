@@ -1,17 +1,21 @@
-import thunk from 'redux-thunk';
-import firebase from '../firebase'
-import { createStore, compose } from 'redux'
-import { reactReduxFirebase } from 'react-redux-firebase'
-import { reduxFirestore } from 'redux-firestore'
+import {createStore, compose, applyMiddleware} from 'redux'
 import 'firebase/firestore'
 import { rootReducer } from './reducers/rootReducer'
-import { useFirestore } from 'react-redux-firebase'
+import firebase from "firebase/app";
+import {createFirestoreInstance, reduxFirestore} from "redux-firestore";
+
+const createStoreWithFirebase = compose(
+    reduxFirestore(firebase), // firebase instance as first argument, rfConfig as optional second
+)(createStore);
 
 
+const initialState = {};
+const store = createStoreWithFirebase(rootReducer, initialState)
 
-firebase.firestore().settings({ timestampsInSnapshots: true })
 
-const store = createStore(rootReducer);
+/*
+const store = createStore(rootReducer,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+*/
 
 
 export default store;

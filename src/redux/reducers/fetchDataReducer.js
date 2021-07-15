@@ -1,23 +1,21 @@
 import firebase from "../../firebase";
 
-
-
-let data = [];
-
+const initialState = [{t: "jjjjj"}];
 const ref = firebase.firestore().collection("myblogs");
 
 
-const fetchDataReducer = (state = data, action) =>{
+const fetchDataReducer = (state = initialState, action) =>{
     switch (action.type){
         case 'GET_DATA':
             ref.onSnapshot((querySnapshot) => {
                 const items = [];
                 querySnapshot.forEach((doc) => {
-                    data.push(doc.data());
-                    console.log(data.length)
+                    state.push(doc.data());
+                    //data.push(doc.data());
+                    //console.log(doc.data())
                 });
             });
-
+            console.log("called!");
             return state;
 
         case 'ERROR' :

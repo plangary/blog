@@ -6,6 +6,7 @@ export const fetchDataAction = (data) =>{
         type: 'GET_DATA',
         data
     }
+
 }
 /*export const fetchData = (data) =>{
     return (dispatch, getState, { getFirebase, getFirestore }) =>{
