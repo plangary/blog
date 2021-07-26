@@ -17,48 +17,37 @@ export const DetailedView = () => {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");
-    const [data, setData] = useState([]);
 
     const isLogged = useSelector(state => state.isLogged);
-    const currentPost = useSelector(state => state.currentPost)
+    const currentPostId = useSelector(state => state.currentPost)
     const dispatch = useDispatch();
-    const mydata = useSelector((state => state.firestore.ordered.myblogs));
+    const data = useSelector((state => state.firestore.ordered.myblogs));
 
-    const setCurrentPost = ()=>{
-        mydata.find(item => {
-            if (item.id === "1"){
-                setTitle(item.title);
-                setDescription(item.description);
-                setDate(item.date);
-            }
-        })
 
-    }
 
     useFirestoreConnect([
         {collection: 'myblogs'}
     ]);
 
 
+
     useEffect(()=>{
     })
 
 
-
-
-    if (!isLoaded(mydata)) {
+    if (!isLoaded(data)) {
         return <div>Loading....</div>
     }
     return (
         <>
-            {console.log(currentPost)}
+            {console.log(x)}
             {console.log(isLogged)}
             <div className="container-fluid mt-4 ">
                 <Row className="g-4 mb-4 mr-5 ml-5">
                     <Card className="bg-dark text-white" style={{width: "100%"}}>
                         <StyledFeaturedImage className="" src="https://static.vecteezy.com/system/resources/previews/000/677/302/non_2x/abstract-technology-banner-background.jpg" alt="Card image"/>
                         <Card.ImgOverlay>
-                            <StyledFeaturedTitle >{mydata[0].title}</StyledFeaturedTitle>
+                            <StyledFeaturedTitle >{data[0].title}</StyledFeaturedTitle>
                         </Card.ImgOverlay>
                     </Card>
                 </Row>
@@ -70,10 +59,10 @@ export const DetailedView = () => {
                             <h2>{title}</h2>
                         </Row>
                         <Row>
-                            <h3>{mydata[0].date}</h3>
+                            <h3>{data[0].date}</h3>
                         </Row>
                         <Row>
-                            {mydata[0].description}
+                            {data[0].description}
                         </Row>
                     </Col>
                     <Col >
@@ -108,7 +97,7 @@ export const DetailedView = () => {
             <br/>
             <br/>
             <Button onClick={()=> dispatch(changeStatus())}>Press</Button>
-            {console.log(mydata.find(x =>{
+            {console.log(data.find(x =>{
                 return x.id === "4"
             }))}
 

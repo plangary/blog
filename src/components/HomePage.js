@@ -6,6 +6,7 @@ import "../style.css"
 import {Link} from "react-router-dom";
 import {currentPostAction} from "../redux/actions/currentPostAction";
 import {useDispatch, useSelector} from "react-redux";
+import {useFirestoreConnect} from "react-redux-firebase";
 
 
 const StyledFeaturedImage = styled(Card.Img)`
@@ -55,10 +56,16 @@ export const HomePage = () => {
         });
     }
 
+    useFirestoreConnect([
+        {collection: 'myblogs'}
+    ])
 
     useEffect(() => {
         getData();
         getFeatured();
+
+
+
     }, []);
 
 
