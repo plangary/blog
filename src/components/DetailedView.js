@@ -15,8 +15,7 @@ const StyledFeaturedTitle = styled(Card.Title)`
 export const DetailedView = () => {
 
     const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [date, setDate] = useState("");
+
 
     const isLogged = useSelector(state => state.isLogged);
     const currentPostId = useSelector(state => state.currentPost)
@@ -25,13 +24,14 @@ export const DetailedView = () => {
 
 
 
-    useFirestoreConnect([
-        {collection: 'myblogs'}
-    ]);
 
+    const x = useSelector(
+        ({ firestore: { data } }) => data.myblogs && data.myblogs[18]
+    )
 
 
     useEffect(()=>{
+
     })
 
 
@@ -40,8 +40,6 @@ export const DetailedView = () => {
     }
     return (
         <>
-            {console.log(x)}
-            {console.log(isLogged)}
             <div className="container-fluid mt-4 ">
                 <Row className="g-4 mb-4 mr-5 ml-5">
                     <Card className="bg-dark text-white" style={{width: "100%"}}>
@@ -97,10 +95,6 @@ export const DetailedView = () => {
             <br/>
             <br/>
             <Button onClick={()=> dispatch(changeStatus())}>Press</Button>
-            {console.log(data.find(x =>{
-                return x.id === "4"
-            }))}
-
 
         </>
     )

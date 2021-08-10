@@ -1,9 +1,5 @@
 
-const initialState = {
-    title: "initial title",
-    description: "initial description",
-    date: "initial date",
-}
+
 const initId = 0;
 
 

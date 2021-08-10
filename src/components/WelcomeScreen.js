@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import {useSelector} from "react-redux";
 const StyledContainer = styled(Container)`
   background-color: #343a40 ;
   max-width: 100%;
@@ -35,9 +36,12 @@ const StyledButton = styled(Button)`
 
 export const WelcomeScreen = ()=> {
 
+    const data = useSelector((state => state.firestore.ordered.myblogs));
+
     return (
 
       <>
+          {console.log(data)}
           <StyledContainer>
               <Row>
                   <Col className="text-center">

@@ -31,6 +31,7 @@ export const HomePage = () => {
     const dispatch = useDispatch();
     const currentPost = useSelector(state => state.currentPost)
 
+    //const data = useSelector((state => state.firestore.ordered.myblogs));
 
     const ref = firebase.firestore().collection("myblogs");
 
@@ -75,7 +76,6 @@ export const HomePage = () => {
     return (
         <>
             <div className="container-fluid mt-4 ">
-
                 <Row className="g-4 mb-4 mr-5 ml-5">
                     <Card className="bg-dark text-white" style={{width: "100%"}}>
                         <StyledFeaturedImage className="" src={featuredPost.url} alt="Card image"/>
@@ -119,7 +119,6 @@ export const HomePage = () => {
                 </Row>
 
                 <Button onClick={()=> dispatch(currentPostAction(1))}>Set Featured</Button>
-
             </div>
 
 

@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "title": "Title 1",
+      "description": " Alright. So it’s safe to say that I’m bored AF of watching Udemy “lectures”. Not that the course i'm watching is bad, it's actually very good. The thing is, I just want to start diving into making my own projects.  I consumed hours of course materials yesterday, and I learned quite a bit. But I know that the best way for me to learn is to just get my hands dirty. So Today",
+      "featured": false,
+      "url": "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-320-80.jpg",
+      "date": "June 25, 2021"
+    },{
+      "title": "Title 2",
+      "description": "description",
+      "featured": false,
+      "url": "google.com",
+      "date": "June 24, 2021"
+    },{
+      "title": "Day 3 - Maybe I have a slight idea",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+      "featured": false,
+      "url": "https://expertphotography.com/wp-content/uploads/2011/06/how-to-take-good-pictures-image2.jpg",
+      "date": "June 28, 2021"
+    },{
+      "title": "",
+      "description": "This was my first day learning React (kinda)....  I started learning by following a React course I bought on Udemy. this one here: React - The Complete Guide.  I bought this course when it was on sale (shocker right?). I’ve been speed running through as much content as possible on 1.5 speed. I’ve made it through a bunch of modules. I’ve learned about: ",
+      "featured": false,
+      "url": "",
+      "date": "June 24, 2021"
+    },{
+      "title": "My first day learning react",
+      "description": "",
+      "featured": false,
+      "url": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
+      "date": "June 24, 2021"
+    }
+  ]
+}
