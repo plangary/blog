@@ -36,12 +36,10 @@ const StyledButton = styled(Button)`
 
 export const WelcomeScreen = ()=> {
 
-    const data = useSelector((state => state.firestore.ordered.myblogs));
 
     return (
 
       <>
-          {console.log(data)}
           <StyledContainer>
               <Row>
                   <Col className="text-center">

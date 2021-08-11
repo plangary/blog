@@ -1,17 +1,14 @@
 import {combineReducers} from "redux";
 import loggedReducer from "./isLogged";
-import {firebaseReducer} from "react-redux-firebase";
-import {firestoreReducer} from "redux-firestore";
-import  fetchDataReducer  from '../reducers/fetchDataReducer';
+import setDataReducer from "./setDataReducer";
+
 import currentPostReducer  from "./currentPostReducer";
 
 
 export const rootReducer = combineReducers({
 
-    data: fetchDataReducer,
+    setData: setDataReducer,
     isLogged: loggedReducer,
-    firebase: firebaseReducer,
-    firestore: firestoreReducer,
     currentPost: currentPostReducer,
 });
 

@@ -8,8 +8,8 @@
       "date": "June 25, 2021"
     },{
       "title": "Title 2",
-      "description": "description",
-      "featured": false,
+      "description": "my description",
+      "featured": true,
       "url": "google.com",
       "date": "June 24, 2021"
     },{
