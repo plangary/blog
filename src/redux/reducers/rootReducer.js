@@ -1,13 +1,13 @@
 import {combineReducers} from "redux";
 import loggedReducer from "./isLogged";
-import setDataReducer from "./setDataReducer";
 
 import currentPostReducer  from "./currentPostReducer";
+import fetchPostReducer from "./fetchPostReducer";
 
 
 export const rootReducer = combineReducers({
 
-    setData: setDataReducer,
+    fetchPosts: fetchPostReducer,
     isLogged: loggedReducer,
     currentPost: currentPostReducer,
 });

@@ -1,35 +1,44 @@
 {
   "posts": [
     {
-      "title": "Title 1",
-      "description": " Alright. So it’s safe to say that I’m bored AF of watching Udemy “lectures”. Not that the course i'm watching is bad, it's actually very good. The thing is, I just want to start diving into making my own projects.  I consumed hours of course materials yesterday, and I learned quite a bit. But I know that the best way for me to learn is to just get my hands dirty. So Today",
+      "title": "My first day learning React xD",
+      "description": " This was my first day learning React (kinda)....\n\nI started learning by following a React course I bought on Udemy. this one here: React - The Complete Guide.\n\nI bought this course when it was on sale (shocker right?). I’ve been speed running through as much content as possible on 1.5 speed. I’ve made it through a bunch of modules.\nI’ve learned about:\n\n    es-6\n    Spread and rest operators\n    Destructuring\n    Components\n    JSX\n    Functional vs stateful components\n    State\n    React hooks\n    Redux\n\n& a ton more.\n\nThis is a great course, definitely worth the money, but to be honest I am getting a bit bored of watching course modules. Tomorrow I think I will start my first from-scratch react project.",
       "featured": false,
       "url": "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-320-80.jpg",
-      "date": "June 25, 2021"
+      "date": "Feb. 3, 2021",
+      "id": "1"
     },{
-      "title": "Title 2",
-      "description": "my description",
-      "featured": true,
+      "title": "Day 4 - going hard",
+      "description": "Okay, so today I went hard in the paint.\n\nI basically finished the entire blog detail portion of the app. Now when you click on a blog item from the blog home screen you will be navigated to THIS detail page!...\n\nI struggled for a moment to get everything to look nice on different device sizes (aka make it reactive). But I ended up pulling through. The Material Design library that I am using makes that so much easier. I think it looks pretty good.\n\nI also added Google auth from Firebase, so users can now sign in to the website. The reason I added this is for comments! I added some code so that users who are logged in can leave comments on each blog post. I don’t imagine anyone actually using this, but it was a fun little feature to add and also a great way to showcase my React skillzzz.\n\nWith the implementation of auth, I introduced Redux to the application. This was a great opportunity for me to really learn about Redux and have a practical reason to implement it.",
+      "featured": false,
       "url": "google.com",
-      "date": "June 24, 2021"
+      "date": "June 24, 2021",
+      "id": "2"
+
     },{
       "title": "Day 3 - Maybe I have a slight idea",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
       "featured": false,
       "url": "https://expertphotography.com/wp-content/uploads/2011/06/how-to-take-good-pictures-image2.jpg",
-      "date": "June 28, 2021"
+      "date": "June 28, 2021",
+      "id": "3"
+
     },{
-      "title": "",
+      "title": "Day 12 - Still learning react",
       "description": "This was my first day learning React (kinda)....  I started learning by following a React course I bought on Udemy. this one here: React - The Complete Guide.  I bought this course when it was on sale (shocker right?). I’ve been speed running through as much content as possible on 1.5 speed. I’ve made it through a bunch of modules. I’ve learned about: ",
       "featured": false,
       "url": "",
-      "date": "June 24, 2021"
+      "date": "June 24, 2021",
+      "id": "4"
+
     },{
       "title": "My first day learning react",
-      "description": "",
-      "featured": false,
+      "description": "Sample description goes here",
+      "featured": true,
       "url": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
-      "date": "June 24, 2021"
+      "date": "June 26, 2021",
+      "id": "5"
+
     }
   ]
 }

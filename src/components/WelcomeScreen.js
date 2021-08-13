@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import {useSelector} from "react-redux";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchPosts} from "../redux/actions/fetchPostAction";
+import {currentPostAction} from "../redux/actions/currentPostAction";
+
 const StyledContainer = styled(Container)`
   background-color: #343a40 ;
   max-width: 100%;
@@ -36,9 +40,13 @@ const StyledButton = styled(Button)`
 
 export const WelcomeScreen = ()=> {
 
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(fetchPosts())
+    },[])
 
     return (
-
       <>
           <StyledContainer>
               <Row>
