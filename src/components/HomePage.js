@@ -56,7 +56,6 @@ export const HomePage = () => {
                     </Row>
 
                 </div>
-
                 <div className="container-fluid mt-4">
                     <Row xs={1} md={2} className="g-4 mb-4 mr-5 ml-5">
                         {Array.from({length: numberOfItems}).map((_, idx) => (
@@ -86,7 +85,6 @@ export const HomePage = () => {
                         ))}
                     </Row>
                 </div>
-
 
             </>
 

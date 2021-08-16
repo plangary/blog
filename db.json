@@ -11,7 +11,7 @@
       "title": "Day 4 - going hard",
       "description": "Okay, so today I went hard in the paint.\n\nI basically finished the entire blog detail portion of the app. Now when you click on a blog item from the blog home screen you will be navigated to THIS detail page!...\n\nI struggled for a moment to get everything to look nice on different device sizes (aka make it reactive). But I ended up pulling through. The Material Design library that I am using makes that so much easier. I think it looks pretty good.\n\nI also added Google auth from Firebase, so users can now sign in to the website. The reason I added this is for comments! I added some code so that users who are logged in can leave comments on each blog post. I don’t imagine anyone actually using this, but it was a fun little feature to add and also a great way to showcase my React skillzzz.\n\nWith the implementation of auth, I introduced Redux to the application. This was a great opportunity for me to really learn about Redux and have a practical reason to implement it.",
       "featured": false,
-      "url": "google.com",
+      "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-907914534-1590070809.jpg",
       "date": "June 24, 2021",
       "id": "2"
 
@@ -27,7 +27,7 @@
       "title": "Day 12 - Still learning react",
       "description": "This was my first day learning React (kinda)....  I started learning by following a React course I bought on Udemy. this one here: React - The Complete Guide.  I bought this course when it was on sale (shocker right?). I’ve been speed running through as much content as possible on 1.5 speed. I’ve made it through a bunch of modules. I’ve learned about: ",
       "featured": false,
-      "url": "",
+      "url": "https://images.all-free-download.com/images/graphicthumb/beautiful_scenery_04_hd_pictures_166258.jpg",
       "date": "June 24, 2021",
       "id": "4"
 
