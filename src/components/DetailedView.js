@@ -1,14 +1,10 @@
 import {useSelector, useDispatch} from "react-redux";
-import { Card, Col, Row} from "react-bootstrap";
+import {Button, Card, Col, Row} from "react-bootstrap";
 import styled from "styled-components";
 import {useEffect, useState} from "react";
 import {currentPostAction} from "../redux/actions/currentPostAction";
-import {CardActions, CardContent, Container, CssBaseline, Grid, makeStyles, Typography} from "@material-ui/core";
-import { featuredPost } from "./subcomponents/featuredPost";
-import {Button} from "@material-ui/core";
-import {Header} from "./subcomponents/Header";
 import { connect } from 'react-redux'
-
+import {changeStatus} from '../redux/actions/loggedStatusAction'
 
 const StyledFeaturedImage = styled(Card.Img)`
   height: 20rem;
@@ -28,36 +24,14 @@ const StyledCard = styled(Card)`
 
 
 
-const mainFeaturedPost = {
-    title: 'Title of a longer featured blog post',
-    description:
-        "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
-    imgText: 'main image description',
-    linkText: 'Continue reading…',
-};
+
 
 const HorizontalLine = styled.hr`
   background-color: black;
   height: 1px
 `
 
-const useStyles = makeStyles({
-    root: {
-        minWidth: 275,
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-});
+
 const DetailedView = (props) => {
 
     const [currentPost, setCurrentPost] = useState({});
@@ -82,6 +56,7 @@ const DetailedView = (props) => {
         <>
             {console.log(props.id)}
              <div className="container-fluid mt-4 ">
+                 <Button onClick={() => dispatch(changeStatus())}>HERE</Button>
                 <Row className="g-4 mb-4 mr-5 ml-5">
                     <Card className="bg-dark text-white" style={{width: "100%"}}>
                         <StyledFeaturedImage className="" src={currentPost.url} alt="Card image"/>
@@ -112,7 +87,7 @@ const DetailedView = (props) => {
                             <h2>Other Posts</h2>
                         </Row>
                         <Row>
-                            {posts.map(item => <StyledCard style={{cursor: 'pointer'}} onClick={()=>dispatch(currentPostAction(2))} border="secondary" >
+                            {posts.map(item => <StyledCard style={{cursor: 'pointer'}} onClick={()=>dispatch(currentPostAction(item.id))} border="secondary" >
                                 <StyledCard.Header>Header</StyledCard.Header>
                                 <StyledCard.Body>
                                     <StyledCard.Title>{item.title}</StyledCard.Title>
